@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 5 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+/*      OPERADORES DE COMPARAÇÃO:
+
+        == (Igualdade: comparação de um valor);
+        != (Diferente: comparação de um valor);
+        === (Igualdade: comparação de um valor e tipo);
+        !== (Diferente: comparação de um valor e tipo);
+        > (Maior);
+        >= (Maior ou igual);
+        < (Menor);
+        <= (Menor ou igual)
+*/
+
+/*      PROBLEMA: Pedir para o usuário digitar dois números
+        e mostrar um boolean, caso a média deles seja maior que 5.
+*/
+        var n1 = prompt("Digite um número: ");
+        n1 = parseFloat(n1);
+
+        var n2 = prompt("Digite outro número: ");
+        n2 = parseFloat(n2);
+
+        var media = (n1 + n2) / 2;
+
+        alert(media > 5); //Se for maior que 5, retorna 'true'. Se não, 'false'.
+
+    </script>
+
+</body>
+
+</html>

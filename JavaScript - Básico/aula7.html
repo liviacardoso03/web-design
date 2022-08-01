@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 7 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+/*      PROBLEMA: Pedir para o jogador 1 digitar um número e o jogador 2 outro número.
+        Com isso, será necessário sortear um número entre 0 e 1.
+        Se forem iguais, 'empate', se o número for 0, 'menor ganhou', 
+        se o número for 1, 'maior ganhou'.
+*/
+        var n1 = parseInt(prompt("Jogador 1, digite um número (0 a 1): "));
+        
+        var n2 = parseInt(prompt("Jogador 2, digite um número (0 a 1): "));
+
+        if(n1 == n2)
+        {
+            alert("Parabéns, os dois empataram!");
+        }
+
+       else
+        {
+            var sorteado = parseInt(Math.random() * 2);//Sortear números em JavaScript
+
+            if(sorteado == 0)//Se o número sorteado for 0, cai nessa exceção:
+            {
+                if(n1 < n2)
+                {
+                    alert("Jogador 1 ganhou!");
+                }
+
+                else
+                {
+                    alert("Jogador 2 ganhou!");
+                }
+            }
+
+            else //Se o número sorteado for 1, cai nessa exceção:
+            {
+                if(n1 > n2)
+                {
+                    alert("Jogador 1 ganhou!");
+                }
+
+                else
+                {
+                    alert("Jogador 2 ganhou!");
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

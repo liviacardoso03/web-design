@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 17 - JavaScript</title>
+</head>
+
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>
+/*
+        EXERCÍCIO: criar uma função que retorne a média de números
+        passados por parâmetros. Essa função pode receber quantos 
+        números forem necessários.
+        EXEMPLO: 'calcularMedia(2, 4) = 3'
+        'calcularMedia(1, 1, 2, 3, 5) = 2,4'
+*/
+
+        (function()
+        {
+            function calcularMedia()
+            {
+                var total = 0;
+                var quantidade = arguments.length;//Retorna o número de elementos
+                var x = 0;
+
+                while(typeof arguments[x] === 'number')//Enquanto isso for verdadeiro...
+                {
+                    total += arguments[x];//Total vai receber o valor de total + arguments no indíce X
+                    x++;
+                }
+
+                return (total / quantidade);
+            }
+
+            var media1 = calcularMedia(2, 3);
+            var media2 = calcularMedia(4, 0, 10, 10);
+
+            console.log("Média 1: ", media1);
+            console.log("Média 2: ", media2);
+
+        })()    
+
+    </script>
+</body>
+
+</html>

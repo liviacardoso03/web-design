@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 10 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+/*      PROBLEMA (Estrutura de Repetição): Pedir para o usuário digitar um número
+        e mostrar a tabuada dele de 1 a 1000.
+*/
+        var n1 = parseInt(prompt("Digite um número: "));
+
+        var indice = 1;
+        
+        while (indice <= 1000)//Enquanto for menor que 1000, faça isso:
+        {
+            document.write(n1 + " X " + indice + " = " + (n1 * indice) +"<br>");
+
+            if(indice % 10 == 0)
+            {
+                document.write("<hr>")
+            }
+
+            indice++;
+            //document.write s= Função para mostrar o valor na tela para o usuário. 
+        }
+
+        document.write("<br> Saiu do loop.")
+
+    </script>
+
+</body>
+
+</html>

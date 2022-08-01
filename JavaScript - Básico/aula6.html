@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 6 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+/*      PROBLEMA: Pedir para o usuário digitar duas notas
+        e se caso a média deles seja maior que 5, 'aprovado', se não, 'reprovado'.
+*/
+        var n1 = prompt("Digite a primeira nota: ");
+        n1 = parseFloat(n1);
+
+        var n2 = prompt("Digite a segunda nota: ");
+        n2 = parseFloat(n2);
+
+        var media = (n1 + n2) / 2;
+
+        if(media > 5)
+        {
+            alert("Parabéns, você foi aprovado!");
+        }
+
+        else
+        {
+            alert("Que pena, você foi reprovado!");
+        }
+        
+    </script>
+
+</body>
+
+</html>

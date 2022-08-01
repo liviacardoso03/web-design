@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste - JavaScript</title>
+</head>
+
+<body>
+<!--PROBLEMA: Pedir para o usuário digitar um número
+    e após isso, mostrar na tela 4 botões com as 
+    operaçãoes matemáticas básicas e em seguida, calcular referente
+    ao que foi selecionado.-->
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <button onclick="soma()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="multi()">*</button>
+    <button onclick="divi()">/</button>
+
+    <div id="output">
+
+    </div>
+    
+    <script>
+
+        var n1 = parseInt(prompt("Digite um número: "));
+
+        escreve();
+
+        function escreve()
+        {
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;//Escreve o valor digitado pelo usuário na tela
+        }
+
+        function soma()
+        {
+            var n2 = parseInt(prompt("Digite um outro número: "));
+        
+            n1 = n1 + n2;
+
+            escreve();
+        }
+
+        function sub()
+        {
+            var n2 = parseInt(prompt("Digite um outro número: "));
+        
+            n1 = n1 - n2;
+
+            escreve();
+        }
+
+        function divi()
+        {
+            var n2 = parseInt(prompt("Digite um outro número: "));
+        
+            n1 = n1 / n2;
+
+            escreve();
+        }
+
+        function multi()
+        {
+            var n2 = parseInt(prompt("Digite um outro número: "));
+        
+            n1 = n1 * n2;
+
+            escreve();
+        }
+        
+    </script>
+
+</body>
+
+</html>

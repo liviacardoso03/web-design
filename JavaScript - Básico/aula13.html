@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 13 - JavaScript</title>
+</head>
+
+<body>
+<!--PROBLEMA: Pedir para o usuário digitar um número
+    e mostrar a tabuada dele de 1 a 1000. Deve haver a possibilidade
+    do usuário digitar outro númeor e também limpar a tabuada gerada
+    previamente.-->
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <button onclick="mostrarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+    <!--onclick = evento ao clicar no botão-->    
+    
+    <div id="output">
+
+    </div>
+    
+    <script>
+        function mostrarTabuada()
+        {
+            var number = 1;
+
+            var n1 = parseInt(prompt("Digite um número: "));
+
+            limparTabuada();
+            //Assim que a pessoa pedir para "Criar tabuada", limpa os dados trazidos anteriormente.
+
+            while (number <= 1000)
+            {
+                mensagem += (n1 + " X " + number + " = " + (n1 * number) +"<br>");
+                number++
+            }
+
+            output.innerHTML = mensagem;
+
+        }
+
+        var output = document.querySelector('#output');
+        //querySelector seleciona qualquer elemento do HTML por meio de seu id
+
+        var mensagem = '';
+        
+        function limparTabuada()
+        {
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!--     
+    Toda vez que é necessário acessar o HMTL por meio de códigos
+    do JavaScript, usa-se 'document.' + (algo que se queira manipular).
+
+    - console.log(output); - Uma forma de visualizar o conteúdo enquanto se programa.
+        
+    - output.innerHTML = mensagem;//Método pra adicionar algo no HTML.
+
+    Para não ficar criando a todo momento uma nova variável,
+    é comum criar apenas uma variável, ir atribuindo valores para ela,
+    e no fim, trazer todos os resultados de uma vez só (como por exemplo,
+    no 'innerHTML').
+-->

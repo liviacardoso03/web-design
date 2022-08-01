@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 2 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+        /*PROBLEMA: soma, subtrair, multiplicar e dividir de dois valores digitados pelo usuário.*/
+       
+        var n1 = prompt("Digite um número: ");
+        n1 = parseInt(n1); //Converte para inteiro
+
+        var n2 = prompt("Digite mais um número: ");
+        n2 = parseInt(n2);
+
+        /*Todo dado digitado pelo usuário, irá vir em formato de texto.
+        Será necessário converter para número.*/
+
+        //Typeof = mostra o tipo de dado que uma variável armazena
+
+        var soma = (n1 + n2);
+        var sub = (n1 - n2);
+        var divisao = (n1 / n2);
+        var multi = (n1 * n2);
+
+        alert("A soma dos dois números é de " + soma);
+        alert("A subtração dos dois números é de " + sub);
+        alert("A divisão dos dois números é de " + divisao);
+        alert("A multiplicação dos dois números é de " + multi);
+     
+    </script>
+
+</body>
+
+</html>

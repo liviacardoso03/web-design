@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 8 - JavaScript</title>
+</head>
+
+<body>
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>  
+/*      OPERADORES LÓGICOS:
+
+        ! (Não = not);
+        && (E = and);
+        || (Ou = or).
+
+/*      PROBLEMA: Pedir para o usuário digitar dois números
+        e se caso a média deles seja maior que 5, 'aprovado', se não, 'reprovado'.
+        Porém, se uma das notas for zero, 'reprovado'.
+*/
+        var n1 = parseFloat(prompt("Digite a primeira nota: "));
+
+        var n2 = parseFloat(prompt("Digite a segunda nota: "));
+
+        var media = (n1 + n2) / 2;
+        
+/*      if(n1 > 0 && n2 > 0 && media > 5)//Primeiro jeito de fazer
+        {
+            alert("Parabéns, você foi aprovado!")
+        }
+*/
+        if(n1 == 0 || n2 == 0 || media <= 5)//Segundo jeito de fazer
+        {
+            alert("Que pena, você foi reprovado!");
+        }
+
+        else
+        {
+            alert("Parabéns, você foi aprovado!");
+        }
+     
+    </script>
+
+</body>
+
+</html>

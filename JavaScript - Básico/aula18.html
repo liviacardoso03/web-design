@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 18 - JavaScript</title>
+</head>
+
+<body>
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <script>
+/*
+        EXERCÍCIO: criar uma função que retorne o índice de
+        massa corporal (IMC). Após isso, criar uam outra função
+        que receba este índice e retorne uma string informando sua 
+        classificação.
+*/
+        (function(){
+
+                function calcularIMC(peso, altura, callback){
+                    var imc = peso / (altura * altura); 
+                    
+                    if(callback && typeof callback === 'function'){
+                        return callback(imc); 
+                    }
+                    console.log('nao passou callback')
+                    return imc;
+                }
+                
+                function classificaIMC(imc){
+                                        
+                    if(imc <= 16.9 ){
+                        return 'muito abaixo do peso';
+                    } else if (imc <= 18.4){
+                        return 'abaixo do peso';
+                    } else if(imc <= 24.9){
+                        return 'normal';
+                    } else if(imc <= 29.9) {
+                        return 'acima do peso';
+                    } else if(imc <= 34.9){
+                        return 'obesidade 1';
+                    } else if(imc <= 40){
+                        return 'obesidade 2';
+                    } else {
+                        return 'obesidade 3';
+                    }
+                }
+                
+                var peso = 65;
+                var altura = 1.75;
+                
+                var imc = calcularIMC(peso, altura);
+                
+                console.log('classificacao IMC: ', imc);
+                
+        })()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 15 - JavaScript</title>
+</head>
+
+<body>
+<!--
+    PROBLEMA: Pedir para o usuário digitar dois números que
+    representam os lados de um retângulo assim que a página é 
+    carregada. Mostrar na tela a área total quando clicar no botão.
+-->
+
+    <h1>Lógica de Programação com JavaScript</h1>
+
+    <button onclick="resul(largura, altura)">RESULTADO</button>
+
+    <div id="output">
+
+    </div>
+    
+    <script>
+
+        var largura = parseFloat(prompt("Digite a largura: "));
+        var altura = parseFloat(prompt("Digite a altura: "));
+
+        function resul(l, a)
+        {
+            alert("Área Total: " + (l * a));
+        }
+    </script>
+
+</body>
+
+</html>
